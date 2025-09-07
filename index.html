@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mood Tracker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mood Tracker</h1>
+    <p class="tagline">Une humeur par jour, pour commencer doucement.</p>
+  </header>
+
+  <section id="form-section">
+    <h2>Saisir l'humeur du jour</h2>
+    <form id="mood-form">
+      <div class="field">
+        <label for="mood-select">Humeur :</label>
+        <select id="mood-select" required>
+          <option value="">-- Choisir --</option>
+          <option>Très bien</option>
+          <option>Bien</option>
+          <option>Moyen</option>
+          <option>Fatigué</option>
+          <option>Stressé</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="note">Note (facultatif) :</label>
+        <textarea id="note" rows="3" placeholder="Comment tu te sens ?"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="clear-today" class="secondary">Effacer entrée du jour</button>
+      </div>
+      <p id="feedback" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="stats">
+    <h2>Statistiques</h2>
+    <ul class="stats-list">
+      <li id="days-count">0 jour suivi</li>
+      <li id="most-frequent">Humeur la plus fréquente : —</li>
+      <li id="streak">Série actuelle : 0</li>
+    </ul>
+  </section>
+
+  <section id="history">
+    <h2>Historique</h2>
+    <div class="filters">
+      <label>Filtrer :
+        <select id="filter-select">
+          <option value="all">Toutes</option>
+          <option value="Très bien">Très bien</option>
+          <option value="Bien">Bien</option>
+          <option value="Moyen">Moyen</option>
+          <option value="Fatigué">Fatigué</option>
+          <option value="Stressé">Stressé</option>
+        </select>
+      </label>
+      <button id="export-json" class="secondary small">Exporter JSON</button>
+    </div>
+    <ul id="entries-list"></ul>
+  </section>
+
+  <footer>
+    <p><small>Projet d'apprentissage. Données stockées uniquement dans ton navigateur.</small></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

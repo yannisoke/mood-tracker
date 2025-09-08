@@ -8,12 +8,15 @@ Petit journal d'humeur quotidien : une entrée par jour (humeur + note facultati
 - 1 entrée maximum par jour (mise à jour si on ré-enregistre)
 - Filtre par humeur
 - Suppression / modification
-- Export JSON
+- Export JSON et CSV
+- Graphique de tendance des humeurs
 - Statistiques :
   - Nombre de jours suivis
   - Humeur la plus fréquente
+  - Pourcentage d'humeurs positives
   - Série (streak) de jours consécutifs remplis
 - Mode sombre automatique (prefers-color-scheme)
+- PWA (application web progressive) installable
 
 ## 🗂 Structure
 ```
@@ -34,10 +37,11 @@ Les données restent dans ton navigateur (localStorage). Aucune synchro distante
 - Organisation basique du code
 
 ## 🛠 Améliorations possibles
-- Graphique (Chart.js ou canvas maison)
-- Export CSV
+- Notifications de rappel quotidien
+- Import de données (pour restaurer un export)
 - Stat “% de jours avec humeur positive”
-- PWA (manifest + service worker)
+- Annotation d'événements spéciaux
+- Thèmes de couleurs personnalisables
 - Version React (refactor composants + hooks)
 - Synchronisation avec un backend (Plus tard)
 

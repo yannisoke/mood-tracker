@@ -130,6 +130,26 @@ button.small {
   gap: 6px;
 }
 
+.chart-container {
+  position: relative;
+  text-align: center;
+}
+
+#mood-chart {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.chart-message {
+  margin: 20px 0;
+  color: #526072;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 .filters {
   display: flex;
   gap: 12px;
@@ -228,5 +248,9 @@ footer {
   .mood-tag {
     background: #2f4257;
     color: #c8dcf2;
+  }
+  #mood-chart {
+    background: var(--panel);
+    border-color: var(--border);
   }
 }

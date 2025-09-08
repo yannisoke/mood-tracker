@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <title>Mood Tracker</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Journal d'humeur quotidien pour suivre votre bien-être" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2d6cdf" />
 </head>
 <body>
   <header>
@@ -45,8 +48,17 @@
     <ul class="stats-list">
       <li id="days-count">0 jour suivi</li>
       <li id="most-frequent">Humeur la plus fréquente : —</li>
+      <li id="positive-percentage">Humeurs positives : —</li>
       <li id="streak">Série actuelle : 0</li>
     </ul>
+  </section>
+
+  <section id="chart-section">
+    <h2>Tendance des humeurs</h2>
+    <div class="chart-container">
+      <canvas id="mood-chart" width="400" height="200" aria-label="Graphique des tendances d'humeur"></canvas>
+      <p id="chart-empty" class="chart-message">Ajoutez quelques entrées pour voir votre tendance d'humeur !</p>
+    </div>
   </section>
 
   <section id="history">
@@ -63,6 +75,7 @@
         </select>
       </label>
       <button id="export-json" class="secondary small">Exporter JSON</button>
+      <button id="export-csv" class="secondary small">Exporter CSV</button>
     </div>
     <ul id="entries-list"></ul>
   </section>
